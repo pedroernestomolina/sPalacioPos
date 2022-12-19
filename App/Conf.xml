@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuracion>
+  <Servidor>
+    <!--<Instancia>192.168.11.238\sqlexpress</Instancia>‎-->
+    <Instancia>localhost\mssql14</Instancia>
+    <Catalogo1>masterprofitpro</Catalogo1>
+    <Catalogo2>pan_a</Catalogo2>
+    <Usuario>profit</Usuario>
+  </Servidor>
+  <CodSerieFacturaFiscal></CodSerieFacturaFiscal>
+  <CodSerieNota></CodSerieNota>
+  <ImpresoraFiscal>
+    <Activar></Activar>
+    <Puerto></Puerto>
+  </ImpresoraFiscal>
+</Configuracion>

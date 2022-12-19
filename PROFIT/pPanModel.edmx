@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="pPanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="saPedidoVenta">
+          <Key>
+            <PropertyRef Name="doc_num" />
+          </Key>
+          <Property Name="doc_num" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="descrip" Type="varchar" MaxLength="60" />
+          <Property Name="co_cli" Type="char" MaxLength="16" Nullable="false" />
+          <Property Name="co_tran" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="co_mone" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="co_ven" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="co_cond" Type="char" MaxLength="6" />
+          <Property Name="fec_emis" Type="smalldatetime" Nullable="false" />
+          <Property Name="fec_venc" Type="smalldatetime" Nullable="false" />
+          <Property Name="fec_reg" Type="smalldatetime" Nullable="false" />
+          <Property Name="anulado" Type="bit" Nullable="false" />
+          <Property Name="status" Type="char" MaxLength="1" />
+          <Property Name="n_control" Type="varchar" MaxLength="20" />
+          <Property Name="ven_ter" Type="bit" Nullable="false" />
+          <Property Name="tasa" Type="decimal" Precision="21" Scale="8" Nullable="false" />
+          <Property Name="porc_desc_glob" Type="varchar" MaxLength="15" />
+          <Property Name="monto_desc_glob" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="porc_reca" Type="varchar" MaxLength="15" />
+          <Property Name="monto_reca" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="total_bruto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="monto_imp" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="monto_imp2" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="monto_imp3" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="otros1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="otros2" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="otros3" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="total_neto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="saldo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="dir_ent" Type="varchar(max)" />
+          <Property Name="comentario" Type="varchar(max)" />
+          <Property Name="dis_cen" Type="xml" />
+          <Property Name="feccom" Type="smalldatetime" />
+          <Property Name="numcom" Type="int" />
+          <Property Name="contrib" Type="bit" Nullable="false" />
+          <Property Name="impresa" Type="bit" Nullable="false" />
+          <Property Name="seriales_s" Type="int" />
+          <Property Name="salestax" Type="char" MaxLength="8" />
+          <Property Name="impfis" Type="varchar" MaxLength="20" />
+          <Property Name="impfisfac" Type="varchar" MaxLength="20" />
+          <Property Name="campo1" Type="varchar" MaxLength="60" />
+          <Property Name="campo2" Type="varchar" MaxLength="60" />
+          <Property Name="campo3" Type="varchar" MaxLength="60" />
+          <Property Name="campo4" Type="varchar" MaxLength="60" />
+          <Property Name="campo5" Type="varchar" MaxLength="60" />
+          <Property Name="campo6" Type="varchar" MaxLength="60" />
+          <Property Name="campo7" Type="varchar" MaxLength="60" />
+          <Property Name="campo8" Type="varchar" MaxLength="60" />
+          <Property Name="co_us_in" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="co_sucu_in" Type="char" MaxLength="6" />
+          <Property Name="fe_us_in" Type="datetime" Nullable="false" />
+          <Property Name="co_us_mo" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="co_sucu_mo" Type="char" MaxLength="6" />
+          <Property Name="fe_us_mo" Type="datetime" Nullable="false" />
+          <Property Name="revisado" Type="char" MaxLength="1" />
+          <Property Name="trasnfe" Type="char" MaxLength="1" />
+          <Property Name="validador" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="co_cta_ingr_egr" Type="char" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="pPanModelStoreContainer">
+          <EntitySet Name="saPedidoVenta" EntityType="Self.saPedidoVenta" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="pPanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="saPedidoVenta">
+          <Key>
+            <PropertyRef Name="doc_num" />
+          </Key>
+          <Property Name="doc_num" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="descrip" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="co_cli" Type="String" MaxLength="16" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="co_tran" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="co_mone" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="co_ven" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="co_cond" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="fec_emis" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fec_venc" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fec_reg" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="anulado" Type="Boolean" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="n_control" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ven_ter" Type="Boolean" Nullable="false" />
+          <Property Name="tasa" Type="Decimal" Precision="21" Scale="8" Nullable="false" />
+          <Property Name="porc_desc_glob" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="monto_desc_glob" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="porc_reca" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="monto_reca" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="total_bruto" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="monto_imp" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="monto_imp2" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="monto_imp3" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="otros1" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="otros2" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="otros3" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="total_neto" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="saldo" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="dir_ent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="comentario" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="dis_cen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="feccom" Type="DateTime" Precision="0" />
+          <Property Name="numcom" Type="Int32" />
+          <Property Name="contrib" Type="Boolean" Nullable="false" />
+          <Property Name="impresa" Type="Boolean" Nullable="false" />
+          <Property Name="seriales_s" Type="Int32" />
+          <Property Name="salestax" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="impfis" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="impfisfac" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="campo1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="campo2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="campo3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="campo4" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="campo5" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="campo6" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="campo7" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="campo8" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="co_us_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="co_sucu_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="fe_us_in" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="co_us_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="co_sucu_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="fe_us_mo" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="revisado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="trasnfe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="validador" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="rowguid" Type="Guid" Nullable="false" />
+          <Property Name="co_cta_ingr_egr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="pPanEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="saPedidoVenta" EntityType="Self.saPedidoVenta" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="pPanModelStoreContainer" CdmEntityContainer="pPanEntities">
+          <EntitySetMapping Name="saPedidoVenta">
+            <EntityTypeMapping TypeName="pPanModel.saPedidoVenta">
+              <MappingFragment StoreEntitySet="saPedidoVenta">
+                <ScalarProperty Name="doc_num" ColumnName="doc_num" />
+                <ScalarProperty Name="descrip" ColumnName="descrip" />
+                <ScalarProperty Name="co_cli" ColumnName="co_cli" />
+                <ScalarProperty Name="co_tran" ColumnName="co_tran" />
+                <ScalarProperty Name="co_mone" ColumnName="co_mone" />
+                <ScalarProperty Name="co_ven" ColumnName="co_ven" />
+                <ScalarProperty Name="co_cond" ColumnName="co_cond" />
+                <ScalarProperty Name="fec_emis" ColumnName="fec_emis" />
+                <ScalarProperty Name="fec_venc" ColumnName="fec_venc" />
+                <ScalarProperty Name="fec_reg" ColumnName="fec_reg" />
+                <ScalarProperty Name="anulado" ColumnName="anulado" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="n_control" ColumnName="n_control" />
+                <ScalarProperty Name="ven_ter" ColumnName="ven_ter" />
+                <ScalarProperty Name="tasa" ColumnName="tasa" />
+                <ScalarProperty Name="porc_desc_glob" ColumnName="porc_desc_glob" />
+                <ScalarProperty Name="monto_desc_glob" ColumnName="monto_desc_glob" />
+                <ScalarProperty Name="porc_reca" ColumnName="porc_reca" />
+                <ScalarProperty Name="monto_reca" ColumnName="monto_reca" />
+                <ScalarProperty Name="total_bruto" ColumnName="total_bruto" />
+                <ScalarProperty Name="monto_imp" ColumnName="monto_imp" />
+                <ScalarProperty Name="monto_imp2" ColumnName="monto_imp2" />
+                <ScalarProperty Name="monto_imp3" ColumnName="monto_imp3" />
+                <ScalarProperty Name="otros1" ColumnName="otros1" />
+                <ScalarProperty Name="otros2" ColumnName="otros2" />
+                <ScalarProperty Name="otros3" ColumnName="otros3" />
+                <ScalarProperty Name="total_neto" ColumnName="total_neto" />
+                <ScalarProperty Name="saldo" ColumnName="saldo" />
+                <ScalarProperty Name="dir_ent" ColumnName="dir_ent" />
+                <ScalarProperty Name="comentario" ColumnName="comentario" />
+                <ScalarProperty Name="dis_cen" ColumnName="dis_cen" />
+                <ScalarProperty Name="feccom" ColumnName="feccom" />
+                <ScalarProperty Name="numcom" ColumnName="numcom" />
+                <ScalarProperty Name="contrib" ColumnName="contrib" />
+                <ScalarProperty Name="impresa" ColumnName="impresa" />
+                <ScalarProperty Name="seriales_s" ColumnName="seriales_s" />
+                <ScalarProperty Name="salestax" ColumnName="salestax" />
+                <ScalarProperty Name="impfis" ColumnName="impfis" />
+                <ScalarProperty Name="impfisfac" ColumnName="impfisfac" />
+                <ScalarProperty Name="campo1" ColumnName="campo1" />
+                <ScalarProperty Name="campo2" ColumnName="campo2" />
+                <ScalarProperty Name="campo3" ColumnName="campo3" />
+                <ScalarProperty Name="campo4" ColumnName="campo4" />
+                <ScalarProperty Name="campo5" ColumnName="campo5" />
+                <ScalarProperty Name="campo6" ColumnName="campo6" />
+                <ScalarProperty Name="campo7" ColumnName="campo7" />
+                <ScalarProperty Name="campo8" ColumnName="campo8" />
+                <ScalarProperty Name="co_us_in" ColumnName="co_us_in" />
+                <ScalarProperty Name="co_sucu_in" ColumnName="co_sucu_in" />
+                <ScalarProperty Name="fe_us_in" ColumnName="fe_us_in" />
+                <ScalarProperty Name="co_us_mo" ColumnName="co_us_mo" />
+                <ScalarProperty Name="co_sucu_mo" ColumnName="co_sucu_mo" />
+                <ScalarProperty Name="fe_us_mo" ColumnName="fe_us_mo" />
+                <ScalarProperty Name="revisado" ColumnName="revisado" />
+                <ScalarProperty Name="trasnfe" ColumnName="trasnfe" />
+                <ScalarProperty Name="validador" ColumnName="validador" />
+                <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+                <ScalarProperty Name="co_cta_ingr_egr" ColumnName="co_cta_ingr_egr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

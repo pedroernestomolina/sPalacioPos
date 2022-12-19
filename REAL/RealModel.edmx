@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PAN_AModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="par_emp">
+          <Key>
+            <PropertyRef Name="cod_emp" />
+          </Key>
+          <Property Name="cod_emp" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="tab_num" Type="int" Nullable="false" />
+          <Property Name="logo" Type="varbinary(max)" />
+          <Property Name="fecha_res" Type="smalldatetime" Nullable="false" />
+          <Property Name="temp_char1" Type="varchar" MaxLength="20" />
+          <Property Name="temp_char2" Type="varchar" MaxLength="20" />
+          <Property Name="temp_char3" Type="varchar" MaxLength="20" />
+          <Property Name="temp_char4" Type="varchar" MaxLength="20" />
+          <Property Name="temp_char5" Type="varchar" MaxLength="20" />
+          <Property Name="temp_char6" Type="varchar" MaxLength="20" />
+          <Property Name="temp_char7" Type="varchar" MaxLength="20" />
+          <Property Name="temp_char8" Type="varchar" MaxLength="20" />
+          <Property Name="temp_fech" Type="smalldatetime" Nullable="false" />
+          <Property Name="temp_num" Type="int" Nullable="false" />
+          <Property Name="emp_adm" Type="varchar" MaxLength="250" />
+          <Property Name="emp_cont" Type="varchar" MaxLength="250" />
+          <Property Name="emp_nom" Type="varchar" MaxLength="250" />
+          <Property Name="urlservidorweb_admin" Type="varchar" MaxLength="128" />
+          <Property Name="urlservidorweb_cont" Type="varchar" MaxLength="128" />
+          <Property Name="urlservidorweb_nom" Type="varchar" MaxLength="128" />
+          <Property Name="tipo_imp_prov_ext" Type="char" MaxLength="1" />
+          <Property Name="netTcp_admin" Type="bit" Nullable="false" />
+          <Property Name="netTcp_cont" Type="bit" Nullable="false" />
+          <Property Name="netTcp_nom" Type="bit" Nullable="false" />
+          <Property Name="login_admin" Type="char" MaxLength="32" />
+          <Property Name="password_admin" Type="char" MaxLength="128" />
+          <Property Name="login_cont" Type="char" MaxLength="32" />
+          <Property Name="password_cont" Type="char" MaxLength="128" />
+          <Property Name="login_nom" Type="char" MaxLength="32" />
+          <Property Name="password_nom" Type="char" MaxLength="128" />
+          <Property Name="fec_cont" Type="smalldatetime" Nullable="false" />
+          <Property Name="co_cue_aju" Type="char" MaxLength="20" />
+          <Property Name="tempor1" Type="int" Nullable="false" />
+          <Property Name="g_moneda" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="g_mostrar_modelo" Type="bit" Nullable="false" />
+          <Property Name="g_alerta_f" Type="int" Nullable="false" />
+          <Property Name="p_desc_art" Type="bit" Nullable="false" />
+          <Property Name="p_desc_cat" Type="bit" Nullable="false" />
+          <Property Name="p_desc_glo" Type="bit" Nullable="false" />
+          <Property Name="p_desc_lin" Type="bit" Nullable="false" />
+          <Property Name="v_redondeo" Type="bit" Nullable="false" />
+          <Property Name="v_tipo_redondeo" Type="int" Nullable="false" />
+          <Property Name="v_valor_redondeo" Type="char" MaxLength="4" />
+          <Property Name="c_redondeo" Type="bit" Nullable="false" />
+          <Property Name="c_tipo_redondeo" Type="int" Nullable="false" />
+          <Property Name="c_valor_redondeo" Type="char" MaxLength="4" />
+          <Property Name="v_maneja_sucursales" Type="bit" Nullable="false" />
+          <Property Name="v_concepto_despacho" Type="bit" Nullable="false" />
+          <Property Name="v_manejo_direccion_entrega" Type="bit" Nullable="false" />
+          <Property Name="v_tip_cli" Type="char" MaxLength="6" />
+          <Property Name="v_co_ven" Type="char" MaxLength="6" />
+          <Property Name="v_cond_pago" Type="char" MaxLength="6" />
+          <Property Name="v_cta_ing_egr" Type="char" MaxLength="20" />
+          <Property Name="v_co_seg" Type="char" MaxLength="6" />
+          <Property Name="v_co_zon" Type="char" MaxLength="6" />
+          <Property Name="v_tipo_per" Type="char" MaxLength="1" />
+          <Property Name="i_stock_negativo_advertencia" Type="bit" Nullable="false" />
+          <Property Name="i_stock_negativo" Type="bit" Nullable="false" />
+          <Property Name="i_dec_stock" Type="int" Nullable="false" />
+          <Property Name="i_dec_costo" Type="int" Nullable="false" />
+          <Property Name="i_dec_precio" Type="int" Nullable="false" />
+          <Property Name="i_multiple_moneda" Type="bit" Nullable="false" />
+          <Property Name="i_moneda_articulo" Type="char" MaxLength="6" />
+          <Property Name="i_seriales_articulo" Type="bit" Nullable="false" />
+          <Property Name="i_licores" Type="bit" Nullable="false" />
+          <Property Name="i_tipo_cost_dev" Type="int" Nullable="false" />
+          <Property Name="i_maneja_lotes_vencidos" Type="bit" Nullable="false" />
+          <Property Name="i_costo_inventario" Type="int" Nullable="false" />
+          <Property Name="i_permitir_fec_menor_ult_inv" Type="bit" Nullable="false" />
+          <Property Name="i_manejo_art_comp" Type="int" />
+          <Property Name="c_margen_costo_precio" Type="bit" Nullable="false" />
+          <Property Name="c_tip_pro" Type="char" MaxLength="6" />
+          <Property Name="c_cond_pago" Type="char" MaxLength="6" />
+          <Property Name="c_cta_ing_egr" Type="char" MaxLength="20" />
+          <Property Name="c_co_seg" Type="char" MaxLength="6" />
+          <Property Name="c_co_zon" Type="char" MaxLength="6" />
+          <Property Name="c_tipo_per" Type="char" MaxLength="1" />
+          <Property Name="cb_canc_comp_ord_pag" Type="bit" Nullable="false" />
+          <Property Name="cb_manej_imp_tran" Type="bit" Nullable="false" />
+          <Property Name="cb_impre_fis" Type="bit" Nullable="false" />
+          <Property Name="v_max_reng" Type="int" Nullable="false" />
+          <Property Name="v_max_reng_todos" Type="bit" Nullable="false" />
+          <Property Name="lotes_despacho" Type="bit" Nullable="false" />
+          <Property Name="seriales_despacho" Type="bit" Nullable="false" />
+          <Property Name="format1" Type="char" MaxLength="2" />
+          <Property Name="format2" Type="char" MaxLength="2" />
+          <Property Name="format3" Type="char" MaxLength="2" />
+          <Property Name="format4" Type="char" MaxLength="2" />
+          <Property Name="format5" Type="char" MaxLength="2" />
+          <Property Name="co_sucur" Type="char" MaxLength="6" />
+          <Property Name="campo1" Type="varchar" MaxLength="60" />
+          <Property Name="campo2" Type="varchar" MaxLength="60" />
+          <Property Name="campo3" Type="varchar" MaxLength="60" />
+          <Property Name="campo4" Type="varchar" MaxLength="60" />
+          <Property Name="campo5" Type="varchar" MaxLength="60" />
+          <Property Name="co_us_in" Type="char" MaxLength="6" />
+          <Property Name="co_sucu_in" Type="char" MaxLength="6" />
+          <Property Name="fe_us_in" Type="datetime" Nullable="false" />
+          <Property Name="co_us_mo" Type="char" MaxLength="6" />
+          <Property Name="co_sucu_mo" Type="char" MaxLength="6" />
+          <Property Name="fe_us_mo" Type="datetime" Nullable="false" />
+          <Property Name="revisado" Type="char" MaxLength="1" />
+          <Property Name="trasnfe" Type="char" MaxLength="1" />
+          <Property Name="rowguid" Type="uniqueidentifier" />
+          <Property Name="validador" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="imp_vend" Type="bit" />
+          <Property Name="imp_turno" Type="bit" />
+          <Property Name="imp_numfac" Type="bit" />
+          <Property Name="imp_caja" Type="bit" />
+          <Property Name="imp_suc" Type="bit" />
+          <Property Name="imp_cajero" Type="bit" />
+          <Property Name="c_co_pais" Type="char" MaxLength="6" />
+          <Property Name="v_co_pais" Type="char" MaxLength="6" />
+          <Property Name="cb_sujt_reten" Type="bit" Nullable="false" />
+          <Property Name="cb_reten" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="tipo_imagen" Type="char" MaxLength="30" />
+          <Property Name="tamaño_imagen" Type="int" />
+          <Property Name="co_uni_peso" Type="char" MaxLength="6" />
+          <Property Name="co_uni_volumen" Type="char" MaxLength="6" />
+          <Property Name="c_reten_auto" Type="int" />
+          <Property Name="correoservidor" Type="char" MaxLength="512" />
+          <Property Name="correodir" Type="char" MaxLength="60" />
+          <Property Name="correossl" Type="bit" Nullable="false" />
+          <Property Name="correopuerto" Type="int" Nullable="false" />
+          <Property Name="correometodo_ent" Type="smallint" Nullable="false" />
+          <Property Name="correotiempo_exp" Type="smallint" Nullable="false" />
+          <Property Name="correocredencial_def" Type="bit" Nullable="false" />
+          <Property Name="correousuario" Type="varchar" MaxLength="128" />
+          <Property Name="correopass" Type="varchar" MaxLength="128" />
+          <Property Name="c_retenISLR_auto" Type="int" />
+          <Property Name="v_reconv" Type="bit" Nullable="false" />
+          <Property Name="v_maneja_ncf" Type="bit" Nullable="false" />
+          <Property Name="pto_emision" Type="char" MaxLength="3" />
+          <Property Name="area_imp" Type="char" MaxLength="3" />
+        </EntityType>
+        <EntityContainer Name="PAN_AModelStoreContainer">
+          <EntitySet Name="par_emp" EntityType="Self.par_emp" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PAN_AModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="par_emp">
+          <Key>
+            <PropertyRef Name="cod_emp" />
+          </Key>
+          <Property Name="cod_emp" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="tab_num" Type="Int32" Nullable="false" />
+          <Property Name="logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="fecha_res" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="temp_char1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="temp_char2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="temp_char3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="temp_char4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="temp_char5" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="temp_char6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="temp_char7" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="temp_char8" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="temp_fech" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="temp_num" Type="Int32" Nullable="false" />
+          <Property Name="emp_adm" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="emp_cont" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="emp_nom" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="urlservidorweb_admin" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="urlservidorweb_cont" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="urlservidorweb_nom" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="tipo_imp_prov_ext" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="netTcp_admin" Type="Boolean" Nullable="false" />
+          <Property Name="netTcp_cont" Type="Boolean" Nullable="false" />
+          <Property Name="netTcp_nom" Type="Boolean" Nullable="false" />
+          <Property Name="login_admin" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="password_admin" Type="String" MaxLength="128" FixedLength="true" Unicode="false" />
+          <Property Name="login_cont" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="password_cont" Type="String" MaxLength="128" FixedLength="true" Unicode="false" />
+          <Property Name="login_nom" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="password_nom" Type="String" MaxLength="128" FixedLength="true" Unicode="false" />
+          <Property Name="fec_cont" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="co_cue_aju" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="tempor1" Type="Int32" Nullable="false" />
+          <Property Name="g_moneda" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="g_mostrar_modelo" Type="Boolean" Nullable="false" />
+          <Property Name="g_alerta_f" Type="Int32" Nullable="false" />
+          <Property Name="p_desc_art" Type="Boolean" Nullable="false" />
+          <Property Name="p_desc_cat" Type="Boolean" Nullable="false" />
+          <Property Name="p_desc_glo" Type="Boolean" Nullable="false" />
+          <Property Name="p_desc_lin" Type="Boolean" Nullable="false" />
+          <Property Name="v_redondeo" Type="Boolean" Nullable="false" />
+          <Property Name="v_tipo_redondeo" Type="Int32" Nullable="false" />
+          <Property Name="v_valor_redondeo" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="c_redondeo" Type="Boolean" Nullable="false" />
+          <Property Name="c_tipo_redondeo" Type="Int32" Nullable="false" />
+          <Property Name="c_valor_redondeo" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="v_maneja_sucursales" Type="Boolean" Nullable="false" />
+          <Property Name="v_concepto_despacho" Type="Boolean" Nullable="false" />
+          <Property Name="v_manejo_direccion_entrega" Type="Boolean" Nullable="false" />
+          <Property Name="v_tip_cli" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="v_co_ven" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="v_cond_pago" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="v_cta_ing_egr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="v_co_seg" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="v_co_zon" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="v_tipo_per" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="i_stock_negativo_advertencia" Type="Boolean" Nullable="false" />
+          <Property Name="i_stock_negativo" Type="Boolean" Nullable="false" />
+          <Property Name="i_dec_stock" Type="Int32" Nullable="false" />
+          <Property Name="i_dec_costo" Type="Int32" Nullable="false" />
+          <Property Name="i_dec_precio" Type="Int32" Nullable="false" />
+          <Property Name="i_multiple_moneda" Type="Boolean" Nullable="false" />
+          <Property Name="i_moneda_articulo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="i_seriales_articulo" Type="Boolean" Nullable="false" />
+          <Property Name="i_licores" Type="Boolean" Nullable="false" />
+          <Property Name="i_tipo_cost_dev" Type="Int32" Nullable="false" />
+          <Property Name="i_maneja_lotes_vencidos" Type="Boolean" Nullable="false" />
+          <Property Name="i_costo_inventario" Type="Int32" Nullable="false" />
+          <Property Name="i_permitir_fec_menor_ult_inv" Type="Boolean" Nullable="false" />
+          <Property Name="i_manejo_art_comp" Type="Int32" />
+          <Property Name="c_margen_costo_precio" Type="Boolean" Nullable="false" />
+          <Property Name="c_tip_pro" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="c_cond_pago" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="c_cta_ing_egr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="c_co_seg" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="c_co_zon" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="c_tipo_per" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="cb_canc_comp_ord_pag" Type="Boolean" Nullable="false" />
+          <Property Name="cb_manej_imp_tran" Type="Boolean" Nullable="false" />
+          <Property Name="cb_impre_fis" Type="Boolean" Nullable="false" />
+          <Property Name="v_max_reng" Type="Int32" Nullable="false" />
+          <Property Name="v_max_reng_todos" Type="Boolean" Nullable="false" />
+          <Property Name="lotes_despacho" Type="Boolean" Nullable="false" />
+          <Property Name="seriales_despacho" Type="Boolean" Nullable="false" />
+          <Property Name="format1" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="format2" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="format3" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="format4" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="format5" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="co_sucur" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="campo1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="campo2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="campo3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="campo4" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="campo5" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="co_us_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="co_sucu_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="fe_us_in" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="co_us_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="co_sucu_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="fe_us_mo" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="revisado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="trasnfe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="rowguid" Type="Guid" />
+          <Property Name="validador" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="imp_vend" Type="Boolean" />
+          <Property Name="imp_turno" Type="Boolean" />
+          <Property Name="imp_numfac" Type="Boolean" />
+          <Property Name="imp_caja" Type="Boolean" />
+          <Property Name="imp_suc" Type="Boolean" />
+          <Property Name="imp_cajero" Type="Boolean" />
+          <Property Name="c_co_pais" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="v_co_pais" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="cb_sujt_reten" Type="Boolean" Nullable="false" />
+          <Property Name="cb_reten" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="tipo_imagen" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="tamaño_imagen" Type="Int32" />
+          <Property Name="co_uni_peso" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="co_uni_volumen" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="c_reten_auto" Type="Int32" />
+          <Property Name="correoservidor" Type="String" MaxLength="512" FixedLength="true" Unicode="false" />
+          <Property Name="correodir" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="correossl" Type="Boolean" Nullable="false" />
+          <Property Name="correopuerto" Type="Int32" Nullable="false" />
+          <Property Name="correometodo_ent" Type="Int16" Nullable="false" />
+          <Property Name="correotiempo_exp" Type="Int16" Nullable="false" />
+          <Property Name="correocredencial_def" Type="Boolean" Nullable="false" />
+          <Property Name="correousuario" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="correopass" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="c_retenISLR_auto" Type="Int32" />
+          <Property Name="v_reconv" Type="Boolean" Nullable="false" />
+          <Property Name="v_maneja_ncf" Type="Boolean" Nullable="false" />
+          <Property Name="pto_emision" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="area_imp" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="PAN_AEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="par_emp" EntityType="Self.par_emp" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PAN_AModelStoreContainer" CdmEntityContainer="PAN_AEntities">
+          <EntitySetMapping Name="par_emp">
+            <EntityTypeMapping TypeName="PAN_AModel.par_emp">
+              <MappingFragment StoreEntitySet="par_emp">
+                <ScalarProperty Name="cod_emp" ColumnName="cod_emp" />
+                <ScalarProperty Name="tab_num" ColumnName="tab_num" />
+                <ScalarProperty Name="logo" ColumnName="logo" />
+                <ScalarProperty Name="fecha_res" ColumnName="fecha_res" />
+                <ScalarProperty Name="temp_char1" ColumnName="temp_char1" />
+                <ScalarProperty Name="temp_char2" ColumnName="temp_char2" />
+                <ScalarProperty Name="temp_char3" ColumnName="temp_char3" />
+                <ScalarProperty Name="temp_char4" ColumnName="temp_char4" />
+                <ScalarProperty Name="temp_char5" ColumnName="temp_char5" />
+                <ScalarProperty Name="temp_char6" ColumnName="temp_char6" />
+                <ScalarProperty Name="temp_char7" ColumnName="temp_char7" />
+                <ScalarProperty Name="temp_char8" ColumnName="temp_char8" />
+                <ScalarProperty Name="temp_fech" ColumnName="temp_fech" />
+                <ScalarProperty Name="temp_num" ColumnName="temp_num" />
+                <ScalarProperty Name="emp_adm" ColumnName="emp_adm" />
+                <ScalarProperty Name="emp_cont" ColumnName="emp_cont" />
+                <ScalarProperty Name="emp_nom" ColumnName="emp_nom" />
+                <ScalarProperty Name="urlservidorweb_admin" ColumnName="urlservidorweb_admin" />
+                <ScalarProperty Name="urlservidorweb_cont" ColumnName="urlservidorweb_cont" />
+                <ScalarProperty Name="urlservidorweb_nom" ColumnName="urlservidorweb_nom" />
+                <ScalarProperty Name="tipo_imp_prov_ext" ColumnName="tipo_imp_prov_ext" />
+                <ScalarProperty Name="netTcp_admin" ColumnName="netTcp_admin" />
+                <ScalarProperty Name="netTcp_cont" ColumnName="netTcp_cont" />
+                <ScalarProperty Name="netTcp_nom" ColumnName="netTcp_nom" />
+                <ScalarProperty Name="login_admin" ColumnName="login_admin" />
+                <ScalarProperty Name="password_admin" ColumnName="password_admin" />
+                <ScalarProperty Name="login_cont" ColumnName="login_cont" />
+                <ScalarProperty Name="password_cont" ColumnName="password_cont" />
+                <ScalarProperty Name="login_nom" ColumnName="login_nom" />
+                <ScalarProperty Name="password_nom" ColumnName="password_nom" />
+                <ScalarProperty Name="fec_cont" ColumnName="fec_cont" />
+                <ScalarProperty Name="co_cue_aju" ColumnName="co_cue_aju" />
+                <ScalarProperty Name="tempor1" ColumnName="tempor1" />
+                <ScalarProperty Name="g_moneda" ColumnName="g_moneda" />
+                <ScalarProperty Name="g_mostrar_modelo" ColumnName="g_mostrar_modelo" />
+                <ScalarProperty Name="g_alerta_f" ColumnName="g_alerta_f" />
+                <ScalarProperty Name="p_desc_art" ColumnName="p_desc_art" />
+                <ScalarProperty Name="p_desc_cat" ColumnName="p_desc_cat" />
+                <ScalarProperty Name="p_desc_glo" ColumnName="p_desc_glo" />
+                <ScalarProperty Name="p_desc_lin" ColumnName="p_desc_lin" />
+                <ScalarProperty Name="v_redondeo" ColumnName="v_redondeo" />
+                <ScalarProperty Name="v_tipo_redondeo" ColumnName="v_tipo_redondeo" />
+                <ScalarProperty Name="v_valor_redondeo" ColumnName="v_valor_redondeo" />
+                <ScalarProperty Name="c_redondeo" ColumnName="c_redondeo" />
+                <ScalarProperty Name="c_tipo_redondeo" ColumnName="c_tipo_redondeo" />
+                <ScalarProperty Name="c_valor_redondeo" ColumnName="c_valor_redondeo" />
+                <ScalarProperty Name="v_maneja_sucursales" ColumnName="v_maneja_sucursales" />
+                <ScalarProperty Name="v_concepto_despacho" ColumnName="v_concepto_despacho" />
+                <ScalarProperty Name="v_manejo_direccion_entrega" ColumnName="v_manejo_direccion_entrega" />
+                <ScalarProperty Name="v_tip_cli" ColumnName="v_tip_cli" />
+                <ScalarProperty Name="v_co_ven" ColumnName="v_co_ven" />
+                <ScalarProperty Name="v_cond_pago" ColumnName="v_cond_pago" />
+                <ScalarProperty Name="v_cta_ing_egr" ColumnName="v_cta_ing_egr" />
+                <ScalarProperty Name="v_co_seg" ColumnName="v_co_seg" />
+                <ScalarProperty Name="v_co_zon" ColumnName="v_co_zon" />
+                <ScalarProperty Name="v_tipo_per" ColumnName="v_tipo_per" />
+                <ScalarProperty Name="i_stock_negativo_advertencia" ColumnName="i_stock_negativo_advertencia" />
+                <ScalarProperty Name="i_stock_negativo" ColumnName="i_stock_negativo" />
+                <ScalarProperty Name="i_dec_stock" ColumnName="i_dec_stock" />
+                <ScalarProperty Name="i_dec_costo" ColumnName="i_dec_costo" />
+                <ScalarProperty Name="i_dec_precio" ColumnName="i_dec_precio" />
+                <ScalarProperty Name="i_multiple_moneda" ColumnName="i_multiple_moneda" />
+                <ScalarProperty Name="i_moneda_articulo" ColumnName="i_moneda_articulo" />
+                <ScalarProperty Name="i_seriales_articulo" ColumnName="i_seriales_articulo" />
+                <ScalarProperty Name="i_licores" ColumnName="i_licores" />
+                <ScalarProperty Name="i_tipo_cost_dev" ColumnName="i_tipo_cost_dev" />
+                <ScalarProperty Name="i_maneja_lotes_vencidos" ColumnName="i_maneja_lotes_vencidos" />
+                <ScalarProperty Name="i_costo_inventario" ColumnName="i_costo_inventario" />
+                <ScalarProperty Name="i_permitir_fec_menor_ult_inv" ColumnName="i_permitir_fec_menor_ult_inv" />
+                <ScalarProperty Name="i_manejo_art_comp" ColumnName="i_manejo_art_comp" />
+                <ScalarProperty Name="c_margen_costo_precio" ColumnName="c_margen_costo_precio" />
+                <ScalarProperty Name="c_tip_pro" ColumnName="c_tip_pro" />
+                <ScalarProperty Name="c_cond_pago" ColumnName="c_cond_pago" />
+                <ScalarProperty Name="c_cta_ing_egr" ColumnName="c_cta_ing_egr" />
+                <ScalarProperty Name="c_co_seg" ColumnName="c_co_seg" />
+                <ScalarProperty Name="c_co_zon" ColumnName="c_co_zon" />
+                <ScalarProperty Name="c_tipo_per" ColumnName="c_tipo_per" />
+                <ScalarProperty Name="cb_canc_comp_ord_pag" ColumnName="cb_canc_comp_ord_pag" />
+                <ScalarProperty Name="cb_manej_imp_tran" ColumnName="cb_manej_imp_tran" />
+                <ScalarProperty Name="cb_impre_fis" ColumnName="cb_impre_fis" />
+                <ScalarProperty Name="v_max_reng" ColumnName="v_max_reng" />
+                <ScalarProperty Name="v_max_reng_todos" ColumnName="v_max_reng_todos" />
+                <ScalarProperty Name="lotes_despacho" ColumnName="lotes_despacho" />
+                <ScalarProperty Name="seriales_despacho" ColumnName="seriales_despacho" />
+                <ScalarProperty Name="format1" ColumnName="format1" />
+                <ScalarProperty Name="format2" ColumnName="format2" />
+                <ScalarProperty Name="format3" ColumnName="format3" />
+                <ScalarProperty Name="format4" ColumnName="format4" />
+                <ScalarProperty Name="format5" ColumnName="format5" />
+                <ScalarProperty Name="co_sucur" ColumnName="co_sucur" />
+                <ScalarProperty Name="campo1" ColumnName="campo1" />
+                <ScalarProperty Name="campo2" ColumnName="campo2" />
+                <ScalarProperty Name="campo3" ColumnName="campo3" />
+                <ScalarProperty Name="campo4" ColumnName="campo4" />
+                <ScalarProperty Name="campo5" ColumnName="campo5" />
+                <ScalarProperty Name="co_us_in" ColumnName="co_us_in" />
+                <ScalarProperty Name="co_sucu_in" ColumnName="co_sucu_in" />
+                <ScalarProperty Name="fe_us_in" ColumnName="fe_us_in" />
+                <ScalarProperty Name="co_us_mo" ColumnName="co_us_mo" />
+                <ScalarProperty Name="co_sucu_mo" ColumnName="co_sucu_mo" />
+                <ScalarProperty Name="fe_us_mo" ColumnName="fe_us_mo" />
+                <ScalarProperty Name="revisado" ColumnName="revisado" />
+                <ScalarProperty Name="trasnfe" ColumnName="trasnfe" />
+                <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+                <ScalarProperty Name="validador" ColumnName="validador" />
+                <ScalarProperty Name="imp_vend" ColumnName="imp_vend" />
+                <ScalarProperty Name="imp_turno" ColumnName="imp_turno" />
+                <ScalarProperty Name="imp_numfac" ColumnName="imp_numfac" />
+                <ScalarProperty Name="imp_caja" ColumnName="imp_caja" />
+                <ScalarProperty Name="imp_suc" ColumnName="imp_suc" />
+                <ScalarProperty Name="imp_cajero" ColumnName="imp_cajero" />
+                <ScalarProperty Name="c_co_pais" ColumnName="c_co_pais" />
+                <ScalarProperty Name="v_co_pais" ColumnName="v_co_pais" />
+                <ScalarProperty Name="cb_sujt_reten" ColumnName="cb_sujt_reten" />
+                <ScalarProperty Name="cb_reten" ColumnName="cb_reten" />
+                <ScalarProperty Name="tipo_imagen" ColumnName="tipo_imagen" />
+                <ScalarProperty Name="tamaño_imagen" ColumnName="tamaño_imagen" />
+                <ScalarProperty Name="co_uni_peso" ColumnName="co_uni_peso" />
+                <ScalarProperty Name="co_uni_volumen" ColumnName="co_uni_volumen" />
+                <ScalarProperty Name="c_reten_auto" ColumnName="c_reten_auto" />
+                <ScalarProperty Name="correoservidor" ColumnName="correoservidor" />
+                <ScalarProperty Name="correodir" ColumnName="correodir" />
+                <ScalarProperty Name="correossl" ColumnName="correossl" />
+                <ScalarProperty Name="correopuerto" ColumnName="correopuerto" />
+                <ScalarProperty Name="correometodo_ent" ColumnName="correometodo_ent" />
+                <ScalarProperty Name="correotiempo_exp" ColumnName="correotiempo_exp" />
+                <ScalarProperty Name="correocredencial_def" ColumnName="correocredencial_def" />
+                <ScalarProperty Name="correousuario" ColumnName="correousuario" />
+                <ScalarProperty Name="correopass" ColumnName="correopass" />
+                <ScalarProperty Name="c_retenISLR_auto" ColumnName="c_retenISLR_auto" />
+                <ScalarProperty Name="v_reconv" ColumnName="v_reconv" />
+                <ScalarProperty Name="v_maneja_ncf" ColumnName="v_maneja_ncf" />
+                <ScalarProperty Name="pto_emision" ColumnName="pto_emision" />
+                <ScalarProperty Name="area_imp" ColumnName="area_imp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
